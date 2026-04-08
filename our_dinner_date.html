@@ -1,0 +1,267 @@
+<!DOCTYPE html>
+<html lang="el">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>❤️Our Thessaloniki Dinner Date❤️</title>
+    <style>
+        body, html {
+            margin: 0;
+            padding: 0;
+            height: 100%;
+            font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+            color: white;
+            background-image: url('Picture.png'); 
+            background-size: cover;
+            background-position: center;
+            background-attachment: fixed;
+            background-repeat: no-repeat;
+        }
+
+        body::before {
+            content: "";
+            position: fixed;
+            top: 0; left: 0; width: 100%; height: 100%;
+            background: rgba(0, 0, 0, 0.4); 
+            z-index: -1;
+        }
+
+        .main-wrapper {
+            max-width: 650px;
+            margin: 0 auto;
+            padding: 40px 20px 100px 20px; 
+            display: flex;
+            flex-direction: column;
+            gap: 25px; 
+        }
+
+        /* --- ΚΟΙΝΟ ΣΤΥΛ ΓΙΑ ΟΛΑ ΤΑ ΠΛΑΙΣΙΑ --- */
+        .quiz-box {
+            background: rgba(0, 0, 0, 0.7); 
+            backdrop-filter: blur(5px); 
+            border-radius: 12px;
+            padding: 30px;
+            box-shadow: 0 8px 25px rgba(0,0,0,0.5);
+            border: 1px solid rgba(255, 255, 255, 0.1); 
+        }
+
+        /* --- ΕΙΔΙΚΟ ΣΤΥΛ ΓΙΑ ΤΟΝ ΤΙΤΛΟ ΚΑΙ ΤΟ ΚΕΝΟ (HERO SECTION) --- */
+        .title-box {
+            text-align: center;
+            margin-bottom: 85vh; /* Το κενό που δημιουργεί την απόσταση μίας οθόνης */
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+        }
+        
+        h1 { color: #f4d03f; font-size: 2.2em; margin: 0 0 10px 0; text-transform: uppercase; letter-spacing: 2px; }
+        .intro-text { font-size: 1.1em; line-height: 1.6; margin: 0; color: #ddd; }
+
+        /* --- ΣΤΥΛ ΓΙΑ ΤΟ ANIMATED ΒΕΛΑΚΙ ΣΚΡΟΛΑΡΙΣΜΑΤΟΣ --- */
+        .scroll-indicator {
+            margin-top: 40px;
+            color: #f4d03f;
+            font-size: 1.2em;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            animation: bounce 2s infinite;
+            opacity: 0.8;
+        }
+
+        @keyframes bounce {
+            0%, 20%, 50%, 80%, 100% { transform: translateY(0); }
+            40% { transform: translateY(-15px); }
+            60% { transform: translateY(-7px); }
+        }
+
+        /* --- ΣΤΥΛ ΓΙΑ ΤΙΣ ΕΡΩΤΗΣΕΙΣ --- */
+        .question-title { font-size: 1.25em; color: #f4d03f; margin-bottom: 20px; display: block; font-weight: bold; line-height: 1.4; }
+
+        .options-container { display: flex; flex-direction: column; gap: 12px; }
+        
+        input[type="radio"] { display: none; } 
+        
+        label {
+            background: rgba(255, 255, 255, 0.08);
+            padding: 16px 20px;
+            border-radius: 8px;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            border: 1px solid rgba(255,255,255,0.15);
+            font-size: 1.05em;
+            line-height: 1.4;
+        }
+
+        label:hover { background: rgba(255, 255, 255, 0.18); transform: translateX(5px); }
+
+        input[type="radio"]:checked + label {
+            background-color: #f4d03f;
+            color: #000;
+            font-weight: bold;
+            border-color: #f4d03f;
+            box-shadow: 0 4px 15px rgba(244, 208, 63, 0.3);
+        }
+
+        .submit-box {
+            background: none; 
+            padding: 0;
+            box-shadow: none;
+            border: none;
+        }
+        
+        .submit-btn {
+            display: block;
+            width: 100%;
+            padding: 20px;
+            background-color: #f4d03f;
+            color: black;
+            border: none;
+            border-radius: 8px;
+            font-size: 1.25em;
+            font-weight: bold;
+            text-transform: uppercase;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            box-shadow: 0 8px 20px rgba(0,0,0,0.4);
+        }
+        
+        .submit-btn:hover { background-color: #d4ac0d; transform: translateY(-3px); }
+
+        @media (max-width: 600px) {
+            h1 { font-size: 1.8em; }
+            .quiz-box { padding: 20px; }
+            .question-title { font-size: 1.15em; }
+            label { font-size: 1em; }
+        }
+    </style>
+</head>
+<body>
+
+    <div class="main-wrapper">
+        
+        <div class="quiz-box title-box">
+            <h1>Δημιουργώντας το πιο όμορφο ραντεβού για την αγάπη μου</h1>
+            <p class="intro-text"> Γειαα! Θα με βοηθήσεις να σου φτιάξω το τέλειο ραντεβού; Ανυπομονώ να έρθεις και σου υπόσχομαι ότι θα περάσουμε τέλεια❤️</p>
+            
+            <div class="scroll-indicator">
+                ↓ Συνέχισε παρακάτω ↓
+            </div>
+        </div>
+
+        <form action="https://formspree.io/f/xvzvylyl" method="POST" style="display: flex; flex-direction: column; gap: 25px;">
+
+            <div class="quiz-box">
+                <span class="question-title">1. Αν το ραντεβού μας είχε ένα soundtrack, τι θα έπαιζε από πίσω;</span>
+                <div class="options-container">
+                    <input type="radio" id="q1a" name="1_Soundtrack" value="Ρομαντικό/Απαλό" required>
+                    <label for="q1a">Απαλή μουσική, χαμηλός φωτισμός και ο εμείς που τσουγκρίζουμε το κρασί μας.</label>
+                    
+                    <input type="radio" id="q1b" name="1_Soundtrack" value="Έντονο/Κοκτέιλ">
+                    <label for="q1b">Upbeat ρυθμοί, η φασαρία της κουζίνας και οι σεφ που μαγειρεύουν σε ανοιχτή θέα.</label>
+                    
+                    <input type="radio" id="q1c" name="1_Soundtrack" value="Χαλαρό/Ήσυχο">
+                    <label for="q1c">Τίποτα έντονο, απλά οι δυό μας.</label>
+                </div>
+            </div>
+
+            <div class="quiz-box">
+                <span class="question-title">2. Τι θα ήθελες να φας στο σημερινό ραντεβού; (multiple choice)</span>
+                <div class="options-container">
+                    <input type="checkbox" id="q2a" name="2_Food_Goal" value="Ελληνικό">
+                    <label for="q2a">Κάτι Ελληνικό, όπως αυτά που φάγαμε στα Λαδάδικα.</label>
+                    
+                    <input type="checkbox" id="q2b" name="2_Food_Goal" value="Νέες Γεύσεις">
+                    <label for="q2b">Θέλω να με εκπλήξει ο σεφ. Πάμε για δημιουργικές, νέες γεύσεις!</label>
+                    
+                    <input type="checkbox" id="q2c" name="2_Food_Goal" value="Comfort Food">
+                    <label for="q2c">Comfort food. Κάτι απλό, ίσως με κοκτέιλ από δίπλα..</label>
+					
+					<input type="checkbox" id="q2d" name="2_Food_Goal" value="Ιταλικό">
+                    <label for="q2d">Ιταλικό. Βέβαια δεν θα είναι όσο καλό το κάνεις εσύ αλλά θα ήθελα δοκιμάσουμε.</label>
+					
+					<input type="checkbox" id="q2e" name="2_Food_Goal" value="Κρέας">
+                    <label for="q2e">Ωραία κρέατα, κοπές, με ωραία συνοδευτικά από δίπλα.</label>
+					
+					<input type="checkbox" id="q2f" name="2_Food_Goal" value="Ασιατικό">
+                    <label for="q2f">Ασιάτικο, να δούμε αν θα πλησιάσει ποτέ κανένα τους το Shishan...!</label>
+					
+					<input type="checkbox" id="q2g" name="2_Food_Goal" value="Μεξικάνικο">
+                    <label for="q2g">Μεξικάνικο/Κουβανέζικο μαζί με ωραία Cocktail και sides!</label>
+                </div>
+            </div>
+
+            <div class="quiz-box">
+                <span class="question-title">3. Πόσο effort θα βάλουμε στο ντύσιμο;</span>
+                <div class="options-container">
+                    <input type="radio" id="q3a" name="3_Dress_Code" value="Red Carpet" required>
+                    <label for="q3a">Να στρώσουν το κόκκινο χαλί! Έχω όρεξη να ντυθούμε και να με χαζεύεις χιχι!</label>
+                    
+                    <input type="radio" id="q3b" name="3_Dress_Code" value="Casual Chic">
+                    <label for="q3b">Casual αλλά καλά. Περιποιημένα, αλλά τίποτα υπερβολικό.</label>
+                    
+                    <input type="radio" id="q3c" name="3_Dress_Code" value="Φόρμα/Τζιν">
+                    <label for="q3c">Με τις φόρμες μας.</label>
+                </div>
+            </div>
+
+            <div class="quiz-box">
+                <span class="question-title">4. Πως θα ήθελες να είναι το vibe μας για το τραπέζι;</span>
+                <div class="options-container">
+                    <input type="radio" id="q4a" name="4_Vibe" value="Φουλ Ρομάντζο" required>
+                    <label for="q4a">Να κάνουμε ένα ρομαντικό δείπνο. Θέλω να νιώθω πόσο ερωτευμένος είσαι μαζί μου (Απάντηση: Πολύ)</label>
+                    
+                    <input type="radio" id="q4b" name="4_Vibe" value="Ισορροπία">
+                    <label for="q4b">Η τέλεια ισορροπία. Λίγο ρομάντζο, πολύ γέλιο και χαζομάρες.</label>
+                    
+                    <input type="radio" id="q4c" name="4_Vibe" value="Μόνο Φαγητό">
+                    <label for="q4c">Πάμε απλά να φάμε, δεν με νοιάζει τι θα λέμε και πως θα είμαστε.</label>
+                </div>
+            </div>
+			
+			<div class="quiz-box">
+                <span class="question-title">5. Θα ήθελες κάτι κοντά στο κέντρο ή δεν έχεις θέμα να απομακρυνθούμε;</span>
+                <div class="options-container">
+                    <input type="radio" id="q5a" name="5_Distance" value="Κοντά" required>
+                    <label for="q5a">Κοντά</label>
+                    
+                    <input type="radio" id="q5b" name="5_Distance" value="No Problem">
+                    <label for="q5b">Δεν με πειράζει να πάμε και μακριά.</label>
+					
+					<input type="radio" id="q5c" name="5_Distance" value="Μακριά">
+                    <label for="q5c">Θέλω να πάμε μακριά!</label>
+                    
+                </div>
+            </div>
+
+            <div class="quiz-box">
+                <span class="question-title">6. Και μετά το τραπέζι μας, τι θα ήθελες;</span>
+                <div class="options-container">
+                    <input type="radio" id="q6a" name="6_After_Party" value="Ποτό/Cocktail" required>
+                    <label for="q6a">Ένα χαλαρό ποτό/cocktail για να κλείσει η βραδιά δυνατά σε ένα Rooftop Bar.</label>
+                    
+                    <input type="radio" id="q6b" name="6_After_Party" value="Βόλτα/Γλυκό">
+                    <label for="q6b">Νυχτερινή βόλτα χέρι-χέρι στην Παραλία ή στα Κάστρα. (Μπόνους πόντοι αν πάρουμε και γλυκό χιχι).</label>
+                    
+                    <input type="radio" id="q6c" name="6_After_Party" value="Σπίτι/Ταινία">
+                    <label for="q6c">Να πάρουμε ένα κρασί και να πάμε πίσω στο ξενοδοχείο με την Μιμι, να δούμε ταινία, Amazing Digital Circus ή να κοιμηθούμε.</label>
+                    
+                    <input type="radio" id="q6d" name="6_After_Party" value="Ύπνος">
+                    <label for="q6d">Δεν υπόσχομαι τίποτα. Παίζει να με πάρει ο ύπνος στο ταξί.</label>
+                </div>
+            </div>
+			
+			<div class="quiz-box">
+    <span class="question-title">Θέλετε να προσθέσετε κάτι άλλο ή να μας αφήσετε ένα ωραίο μήνυμα;</span>
+    <p class="intro-text" style="text-align: left; margin-bottom: 15px; font-size: 0.95em;">Υπάρχει κάτι άλλο που θα ήθελες να προσθέσεις; Κάποια λεπτομέρεια, μια επιθυμία ή μια τυχαία σκέψη;</p>
+    <textarea name="Extra_Notes" rows="5" placeholder="Γράψε εδώ ό,τι άλλο θες..."></textarea>
+</div>
+
+            <div class="quiz-box submit-box">
+                <button type="submit" class="submit-btn">Υποβολή απαντήσεων. Σαγαπώ πολύ❤️ </button>
+            </div>
+        </form>
+    </div>
+
+</body>
+</html>
